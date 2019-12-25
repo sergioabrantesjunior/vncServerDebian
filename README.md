@@ -28,7 +28,7 @@ Posteriormente você pode acessar seu PC por qualquer cliente VNC via IP e porta
 3) Download direto do script
 
   ```bash
-  $ wget https://github.com/sergioabrantesjunior/vncServerDebian/blob/master/vncServerDebian
+  $ wget https://raw.githubusercontent.com/sergioabrantesjunior/vncServerDebian/master/vncServerDebian
   ```
 
 Torná-lo executável
