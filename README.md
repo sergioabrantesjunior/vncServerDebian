@@ -8,15 +8,14 @@ Posteriormente você pode acessar seu PC por qualquer cliente VNC via IP e porta
 
 1) Clonar o repositório
 
-```bash
-$ git clone https://github.com/sergioabrantesjunior/vncServerDebian.git
-```
+  ```bash
+  $ git clone https://github.com/sergioabrantesjunior/vncServerDebian.git
+  ```
 
   Torná-lo executável
-
-    ```bash
-    $ chmod u+x vncServerDebian-master/vncServerDebian
-    ```
+  ```bash
+  $ chmod u+x vncServerDebian-master/vncServerDebian
+  ```
 
 2) Download direto projeto compactado
 
