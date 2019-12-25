@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+#
+# Prove: vncServerDebian
+# Descricao Curta: Habilita VNC Server
+# Descrição Longa: Habilita VNC Server no Debian
+# Frequencia: Sob demanda
+# Autor: Sérgio Abrantes
+# Contato: sergioabrantes@gmail.com
+# Site: https://github.com/sergioabrantesjunior/vncServerDebian
+# Licença: GPLv3
+# Fonte: https://community.linuxmint.com/tutorial/view/2334
+# Versao: 1.0.0
+#
+# Exemplo de uso:
+# 		# ./vncServerDebian
+#
+#
+# Histórico:
+#
+#    v1.0.0 2019-12-25, Sérgio Abrantes:
+#       - Versão inicial do script
+
+
+checagens() {
+
+# Verifica se o usuário é root
+
+if [ "$(whoami)" != root ];then
+	clear
+	echo "Você precisa executar esse programa como root"
+	echo "Pode executá-lo também com sudo: sudo $0"
+	exit 1
+fi
+
+preparaPacotes() {
+
+apt remove vino -y
+apt  install x11vnc -y
+
+}
+
+configura() {
+
+mkdir /etc/x11vnc	
+x11vnc --storepasswd /etc/x11vnc/vncpwd
+cat >> /etc/apt/preferences << EOF
+
+[Unit]
+Description=Start x11vnc at startup.
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/x11vnc -auth guess -forever -noxdamage -repeat -rfbauth /etc/x11vnc/vncpwd -rfbport 5900 -shared
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+}
+
+preparaServicos() {
+
+systemctl daemon-reload
+systemctl enable x11vnc.service
+systemctl start x11vnc.service	
+	
+}
+
+executa() {
+
+checagens
+preparaPacotes
+configura
+preparaServicos
+	
+}
+
+executa
