@@ -21,7 +21,7 @@ $ git clone https://github.com/sergioabrantesjunior/vncServerDebian.git
 2) Download direto projeto compactado
 
   ```bash
-  $ wget https://codeload.github.com/sergioabrantesjunior/vncServerDebian/zip/master?token=ANSNBXIHT7C43KZG7CGRPJC6APM6E -O vncServerDebian.zip
+  $ wget https://codeload.github.com/sergioabrantesjunior/vncServerDebian/zip/master -O vncServerDebian.zip
   $ unzip vncServerDebian.zip 
   $ chmod u+x vncServerDebian-master/vncServerDebian
   ```
