@@ -42,3 +42,4 @@ Torná-lo executável
   ```bash
   # ./vncServerDebian
   ```
+  Durante a execução, será solicitado que seja inserido a senha do VNC para posterior conexão.
