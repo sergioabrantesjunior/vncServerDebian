@@ -1,2 +1,2 @@
 # vncDebian
-Shell Script para hbilitar VNC Server no Debian
+Shell Script para habilitar VNC Server no Debian
