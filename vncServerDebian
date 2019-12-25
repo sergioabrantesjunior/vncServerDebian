@@ -36,8 +36,9 @@ fi
 
 preparaPacotes() {
 
+apt update
 apt remove vino -y
-apt  install x11vnc -y
+apt install x11vnc -y
 
 }
 
@@ -45,7 +46,7 @@ configura() {
 
 mkdir /etc/x11vnc	
 x11vnc --storepasswd /etc/x11vnc/vncpwd
-cat >> /etc/apt/preferences << EOF
+cat >> /lib/systemd/system/x11vnc.service << EOF
 
 [Unit]
 Description=Start x11vnc at startup.
