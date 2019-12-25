@@ -1,7 +1,7 @@
 # vncServerDebian
 Shell Script para habilitar VNC Server no Debian
 
-# Instalação
+## Instalação
 
 1) Clonar o repositório
 
@@ -33,4 +33,10 @@ Torná-lo executável
 
 ```bash
 $ chmod u+x vncServerDebian
+```
+
+## Uso
+
+```bash
+# ./vncServerDebian
 ```
