@@ -1,5 +1,6 @@
 # vncServerDebian
 Shell Script para habilitar VNC Server no Debian.
+
 Posteriormente você pode acessar seu PC por qualquer cliente VNC via IP e porta padrão 5900.
 
 
